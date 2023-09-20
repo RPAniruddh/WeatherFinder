@@ -5,7 +5,7 @@ import win32com.client as wincom
 speak = wincom.Dispatch("SAPI.SpVoice")
 
 city = input("Enter the city :- ")
-url = f"https://api.weatherapi.com/v1/current.json?key=3ae3dea5a8864fd6bf2140701230606&q={city}"
+url = f"https://api.weatherapi.com/v1/current.json?key=API_KEY={city}"
 
 r = requests.get(url)
 weather = json.loads(r.text)
